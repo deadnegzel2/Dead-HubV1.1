@@ -1,0 +1,486 @@
+-- (Dead) : Gui to Lua
+-- Version: 1.1
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Login_Gui = Instance.new("Frame")
+local Login_Gui_Bar = Instance.new("Frame")
+local Login_Gui_Name = Instance.new("TextLabel")
+local Login_Key_Bar = Instance.new("TextBox")
+local Login_Key_Bar_Text = Instance.new("TextLabel")
+local Login_Button = Instance.new("TextButton")
+local Login_Version = Instance.new("TextLabel")
+local DEAD_HUB = Instance.new("Frame")
+local Title = Instance.new("Frame")
+local Title_Text = Instance.new("TextLabel")
+local Scripts_Page = Instance.new("Frame")
+local Hacks_Page = Instance.new("Frame")
+local Funky_Friday = Instance.new("Frame")
+local Title_2 = Instance.new("TextLabel")
+local Funky_Friday_Auto_Bot_Script_Button = Instance.new("TextButton")
+local Flag_Wars = Instance.new("Frame")
+local Title_3 = Instance.new("TextLabel")
+local Flag_Wars_Destroyer_Button = Instance.new("TextButton")
+local Fall_Of_Hell = Instance.new("Frame")
+local Title_4 = Instance.new("TextLabel")
+local Fall_Of_Hell_God_Button = Instance.new("TextButton")
+local Arsenal = Instance.new("Frame")
+local Title_5 = Instance.new("TextLabel")
+local Owl_Hub_Button = Instance.new("TextButton")
+local Dark_Hub_Button = Instance.new("TextButton")
+local Prison_Life = Instance.new("Frame")
+local Title_6 = Instance.new("TextLabel")
+local Prison_Life_Admin_Button = Instance.new("TextButton")
+local Funky_Friday_Load = Instance.new("TextButton")
+local Flag_Wars_Load = Instance.new("TextButton")
+local Fall_Of_Hell_Load = Instance.new("TextButton")
+local Arsenal_Load = Instance.new("TextButton")
+local Prison_Life_Load = Instance.new("TextButton")
+local Close_Button = Instance.new("TextButton")
+local Open_Dead_Hub = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = (game:GetService("CoreGui") or gethui())
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Login_Gui.Name = "Login_Gui"
+Login_Gui.Parent = ScreenGui
+Login_Gui.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+Login_Gui.Position = UDim2.new(0.249315053, 0, 0.301204771, 0)
+Login_Gui.Size = UDim2.new(0, 366, 0, 197)
+
+Login_Gui_Bar.Name = "Login_Gui_Bar"
+Login_Gui_Bar.Parent = Login_Gui
+Login_Gui_Bar.BackgroundColor3 = Color3.fromRGB(99, 99, 99)
+Login_Gui_Bar.Size = UDim2.new(0, 366, 0, 42)
+
+Login_Gui_Name.Name = "Login_Gui_Name"
+Login_Gui_Name.Parent = Login_Gui_Bar
+Login_Gui_Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Login_Gui_Name.BackgroundTransparency = 1.000
+Login_Gui_Name.Position = UDim2.new(0.226775944, 0, -0.095238097, 0)
+Login_Gui_Name.Size = UDim2.new(0, 200, 0, 50)
+Login_Gui_Name.Font = Enum.Font.SourceSans
+Login_Gui_Name.Text = "DEAD HUB"
+Login_Gui_Name.TextColor3 = Color3.fromRGB(0, 0, 0)
+Login_Gui_Name.TextScaled = true
+Login_Gui_Name.TextSize = 14.000
+Login_Gui_Name.TextWrapped = true
+
+Login_Key_Bar.Name = "Login_Key_Bar"
+Login_Key_Bar.Parent = Login_Gui
+Login_Key_Bar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Login_Key_Bar.Position = UDim2.new(0.327868849, 0, 0.375634521, 0)
+Login_Key_Bar.Size = UDim2.new(0, 200, 0, 38)
+Login_Key_Bar.Font = Enum.Font.SourceSans
+Login_Key_Bar.Text = "Key Here"
+Login_Key_Bar.TextColor3 = Color3.fromRGB(0, 0, 0)
+Login_Key_Bar.TextSize = 14.000
+
+Login_Key_Bar_Text.Name = "Login_Key_Bar_Text"
+Login_Key_Bar_Text.Parent = Login_Gui
+Login_Key_Bar_Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Login_Key_Bar_Text.BackgroundTransparency = 1.000
+Login_Key_Bar_Text.Position = UDim2.new(-0.0765027329, 0, 0.32994923, 0)
+Login_Key_Bar_Text.Size = UDim2.new(0, 200, 0, 50)
+Login_Key_Bar_Text.Font = Enum.Font.SourceSans
+Login_Key_Bar_Text.Text = "KEY:"
+Login_Key_Bar_Text.TextColor3 = Color3.fromRGB(0, 0, 0)
+Login_Key_Bar_Text.TextScaled = true
+Login_Key_Bar_Text.TextSize = 14.000
+Login_Key_Bar_Text.TextWrapped = true
+
+Login_Button.Name = "Login_Button"
+Login_Button.Parent = Login_Gui
+Login_Button.BackgroundColor3 = Color3.fromRGB(47, 255, 0)
+Login_Button.Position = UDim2.new(0.226775959, 0, 0.65482235, 0)
+Login_Button.Size = UDim2.new(0, 200, 0, 50)
+Login_Button.Font = Enum.Font.SourceSans
+Login_Button.Text = "LOGIN"
+Login_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+Login_Button.TextScaled = true
+Login_Button.TextSize = 14.000
+Login_Button.TextWrapped = true
+Login_Button.MouseButton1Down:connect(function()
+	if Login_Key_Bar.Text == "Dead Was Here!" then
+		Login_Gui.Visible = false
+		Open_Dead_Hub.Visible = true
+	end
+end)
+
+Login_Version.Name = "Login_Version"
+Login_Version.Parent = Login_Gui
+Login_Version.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Login_Version.BackgroundTransparency = 1.000
+Login_Version.Position = UDim2.new(0, 0, 0.817258835, 0)
+Login_Version.Size = UDim2.new(0, 40, 0, 50)
+Login_Version.Font = Enum.Font.SourceSans
+Login_Version.Text = "V1.1"
+Login_Version.TextColor3 = Color3.fromRGB(242, 255, 0)
+Login_Version.TextScaled = true
+Login_Version.TextSize = 14.000
+Login_Version.TextWrapped = true
+
+DEAD_HUB.Name = "DEAD_HUB"
+DEAD_HUB.Parent = ScreenGui
+DEAD_HUB.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+DEAD_HUB.BorderColor3 = Color3.fromRGB(225, 31, 225)
+DEAD_HUB.BorderSizePixel = 5
+DEAD_HUB.Position = UDim2.new(0.245205477, 0, 0.118473902, 0)
+DEAD_HUB.Size = UDim2.new(0, 371, 0, 380)
+DEAD_HUB.Visible = false
+
+Title.Name = "Title"
+Title.Parent = DEAD_HUB
+Title.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderColor3 = Color3.fromRGB(227, 0, 248)
+Title.BorderSizePixel = 5
+Title.Size = UDim2.new(0, 371, 0, 39)
+
+Title_Text.Name = "Title_Text"
+Title_Text.Parent = Title
+Title_Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_Text.BackgroundTransparency = 1.000
+Title_Text.Size = UDim2.new(0, 371, 0, 39)
+Title_Text.Font = Enum.Font.SourceSans
+Title_Text.Text = "DEAD HUB"
+Title_Text.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_Text.TextScaled = true
+Title_Text.TextSize = 14.000
+Title_Text.TextWrapped = true
+
+Scripts_Page.Name = "Scripts_Page"
+Scripts_Page.Parent = DEAD_HUB
+Scripts_Page.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Scripts_Page.BorderColor3 = Color3.fromRGB(227, 0, 248)
+Scripts_Page.BorderSizePixel = 5
+Scripts_Page.Position = UDim2.new(0, 0, 0.118651561, 0)
+Scripts_Page.Size = UDim2.new(0, 371, 0, 39)
+
+Hacks_Page.Name = "Hacks_Page"
+Hacks_Page.Parent = DEAD_HUB
+Hacks_Page.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Hacks_Page.BackgroundTransparency = 1.000
+Hacks_Page.Position = UDim2.new(0, 0, 0.239473686, 0)
+Hacks_Page.Size = UDim2.new(0, 371, 0, 289)
+
+Funky_Friday.Name = "Funky_Friday"
+Funky_Friday.Parent = Hacks_Page
+Funky_Friday.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+Funky_Friday.Size = UDim2.new(0, 371, 0, 289)
+Funky_Friday.Visible = false
+
+Title_2.Name = "Title"
+Title_2.Parent = Funky_Friday
+Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.BackgroundTransparency = 1.000
+Title_2.Size = UDim2.new(0, 371, 0, 45)
+Title_2.Font = Enum.Font.SourceSans
+Title_2.Text = "FUNKY FRIDAY"
+Title_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.TextScaled = true
+Title_2.TextSize = 14.000
+Title_2.TextWrapped = true
+
+Funky_Friday_Auto_Bot_Script_Button.Name = "Funky_Friday_Auto_Bot_Script_Button"
+Funky_Friday_Auto_Bot_Script_Button.Parent = Funky_Friday
+Funky_Friday_Auto_Bot_Script_Button.BackgroundColor3 = Color3.fromRGB(11, 255, 227)
+Funky_Friday_Auto_Bot_Script_Button.Position = UDim2.new(0.159029648, 0, 0.307958484, 0)
+Funky_Friday_Auto_Bot_Script_Button.Size = UDim2.new(0, 253, 0, 32)
+Funky_Friday_Auto_Bot_Script_Button.Font = Enum.Font.SourceSans
+Funky_Friday_Auto_Bot_Script_Button.Text = "Auto Bot Gui"
+Funky_Friday_Auto_Bot_Script_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+Funky_Friday_Auto_Bot_Script_Button.TextScaled = true
+Funky_Friday_Auto_Bot_Script_Button.TextSize = 14.000
+Funky_Friday_Auto_Bot_Script_Button.TextWrapped = true
+Funky_Friday_Auto_Bot_Script_Button.MouseButton1Down:connect(function()
+	--FUNKY FRIDAY
+
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/ZoinkyPoinkie/FunkyFridayDevTools/main/Un-Obfuscated",true))()
+end)
+
+Flag_Wars.Name = "Flag_Wars"
+Flag_Wars.Parent = Hacks_Page
+Flag_Wars.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+Flag_Wars.Size = UDim2.new(0, 371, 0, 289)
+Flag_Wars.Visible = false
+
+Title_3.Name = "Title"
+Title_3.Parent = Flag_Wars
+Title_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_3.BackgroundTransparency = 1.000
+Title_3.Size = UDim2.new(0, 371, 0, 45)
+Title_3.Font = Enum.Font.SourceSans
+Title_3.Text = "FLAG WARS"
+Title_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_3.TextScaled = true
+Title_3.TextSize = 14.000
+Title_3.TextWrapped = true
+
+Flag_Wars_Destroyer_Button.Name = "Flag_Wars_Destroyer_Button"
+Flag_Wars_Destroyer_Button.Parent = Flag_Wars
+Flag_Wars_Destroyer_Button.BackgroundColor3 = Color3.fromRGB(11, 255, 227)
+Flag_Wars_Destroyer_Button.Position = UDim2.new(0.159029648, 0, 0.307958484, 0)
+Flag_Wars_Destroyer_Button.Size = UDim2.new(0, 253, 0, 32)
+Flag_Wars_Destroyer_Button.Font = Enum.Font.SourceSans
+Flag_Wars_Destroyer_Button.Text = "Flag Wars Destroyer-Gui"
+Flag_Wars_Destroyer_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+Flag_Wars_Destroyer_Button.TextScaled = true
+Flag_Wars_Destroyer_Button.TextSize = 14.000
+Flag_Wars_Destroyer_Button.TextWrapped = true
+Flag_Wars_Destroyer_Button.MouseButton1Down:connect(function()
+	--FLAG WARS
+	loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\84\97\107\101\77\111\100\122\122\47\70\108\97\103\45\87\97\114\115\45\68\101\115\116\114\111\121\101\114\47\109\97\105\110\47\77\97\100\101\37\50\48\66\121\37\50\48\84\97\107\101\37\50\48\77\111\100\122\122\34\41\40\41\10")()
+end)
+
+Fall_Of_Hell.Name = "Fall_Of_Hell"
+Fall_Of_Hell.Parent = Hacks_Page
+Fall_Of_Hell.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+Fall_Of_Hell.Size = UDim2.new(0, 371, 0, 289)
+Fall_Of_Hell.Visible = false
+
+Title_4.Name = "Title"
+Title_4.Parent = Fall_Of_Hell
+Title_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_4.BackgroundTransparency = 1.000
+Title_4.Size = UDim2.new(0, 371, 0, 45)
+Title_4.Font = Enum.Font.SourceSans
+Title_4.Text = "Fall Of Hell"
+Title_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_4.TextScaled = true
+Title_4.TextSize = 14.000
+Title_4.TextWrapped = true
+
+Fall_Of_Hell_God_Button.Name = "Fall_Of_Hell_God_Button"
+Fall_Of_Hell_God_Button.Parent = Fall_Of_Hell
+Fall_Of_Hell_God_Button.BackgroundColor3 = Color3.fromRGB(11, 255, 227)
+Fall_Of_Hell_God_Button.Position = UDim2.new(0.159029648, 0, 0.307958484, 0)
+Fall_Of_Hell_God_Button.Size = UDim2.new(0, 253, 0, 32)
+Fall_Of_Hell_God_Button.Font = Enum.Font.SourceSans
+Fall_Of_Hell_God_Button.Text = "God Mode"
+Fall_Of_Hell_God_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fall_Of_Hell_God_Button.TextScaled = true
+Fall_Of_Hell_God_Button.TextSize = 14.000
+Fall_Of_Hell_God_Button.TextWrapped = true
+Fall_Of_Hell_God_Button.MouseButton1Down:connect(function()
+	--Fall Of Hell
+	while true do
+		game:GetService("Players").LocalPlayer.PlayerGui.ForcefieldUI.Forcefield:Destroy()
+		wait(0.1)
+	end
+end)
+
+Arsenal.Name = "Arsenal"
+Arsenal.Parent = Hacks_Page
+Arsenal.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+Arsenal.Size = UDim2.new(0, 371, 0, 289)
+Arsenal.Visible = false
+
+Title_5.Name = "Title"
+Title_5.Parent = Arsenal
+Title_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_5.BackgroundTransparency = 1.000
+Title_5.Size = UDim2.new(0, 371, 0, 45)
+Title_5.Font = Enum.Font.SourceSans
+Title_5.Text = "Arsenal"
+Title_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_5.TextScaled = true
+Title_5.TextSize = 14.000
+Title_5.TextWrapped = true
+
+Owl_Hub_Button.Name = "Owl_Hub_Button"
+Owl_Hub_Button.Parent = Arsenal
+Owl_Hub_Button.BackgroundColor3 = Color3.fromRGB(11, 255, 227)
+Owl_Hub_Button.Position = UDim2.new(0.159029648, 0, 0.307958484, 0)
+Owl_Hub_Button.Size = UDim2.new(0, 253, 0, 32)
+Owl_Hub_Button.Font = Enum.Font.SourceSans
+Owl_Hub_Button.Text = "Owl Hub"
+Owl_Hub_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+Owl_Hub_Button.TextScaled = true
+Owl_Hub_Button.TextSize = 14.000
+Owl_Hub_Button.TextWrapped = true
+Owl_Hub_Button.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://athoi21.xyz/owlhub"))();
+end)
+
+Dark_Hub_Button.Name = "Dark_Hub_Button"
+Dark_Hub_Button.Parent = Arsenal
+Dark_Hub_Button.BackgroundColor3 = Color3.fromRGB(11, 255, 227)
+Dark_Hub_Button.Position = UDim2.new(0.159029648, 0, 0.491349488, 0)
+Dark_Hub_Button.Size = UDim2.new(0, 253, 0, 32)
+Dark_Hub_Button.Font = Enum.Font.SourceSans
+Dark_Hub_Button.Text = "Dark Hub"
+Dark_Hub_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+Dark_Hub_Button.TextScaled = true
+Dark_Hub_Button.TextSize = 14.000
+Dark_Hub_Button.TextWrapped = true
+Dark_Hub_Button.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(("https://darkhub.xyz/remote-script.lua"), true))()
+end)
+
+Prison_Life.Name = "Prison_Life"
+Prison_Life.Parent = Hacks_Page
+Prison_Life.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+Prison_Life.Size = UDim2.new(0, 371, 0, 289)
+
+Title_6.Name = "Title"
+Title_6.Parent = Prison_Life
+Title_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_6.BackgroundTransparency = 1.000
+Title_6.Size = UDim2.new(0, 371, 0, 45)
+Title_6.Font = Enum.Font.SourceSans
+Title_6.Text = "Prison Life"
+Title_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_6.TextScaled = true
+Title_6.TextSize = 14.000
+Title_6.TextWrapped = true
+
+Prison_Life_Admin_Button.Name = "Prison_Life_Admin_Button"
+Prison_Life_Admin_Button.Parent = Prison_Life
+Prison_Life_Admin_Button.BackgroundColor3 = Color3.fromRGB(11, 255, 227)
+Prison_Life_Admin_Button.Position = UDim2.new(0.159029648, 0, 0.307958484, 0)
+Prison_Life_Admin_Button.Size = UDim2.new(0, 253, 0, 32)
+Prison_Life_Admin_Button.Font = Enum.Font.SourceSans
+Prison_Life_Admin_Button.Text = "Admin"
+Prison_Life_Admin_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+Prison_Life_Admin_Button.TextScaled = true
+Prison_Life_Admin_Button.TextSize = 14.000
+Prison_Life_Admin_Button.TextWrapped = true
+Prison_Life_Admin_Button.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/PrisonLife'),true))()
+end)
+
+Funky_Friday_Load.Name = "Funky_Friday_Load"
+Funky_Friday_Load.Parent = DEAD_HUB
+Funky_Friday_Load.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Funky_Friday_Load.Position = UDim2.new(0.0458221026, 0, 0.136842102, 0)
+Funky_Friday_Load.Size = UDim2.new(0, 59, 0, 11)
+Funky_Friday_Load.Font = Enum.Font.SourceSans
+Funky_Friday_Load.Text = "Funky Friday"
+Funky_Friday_Load.TextColor3 = Color3.fromRGB(0, 0, 0)
+Funky_Friday_Load.TextScaled = true
+Funky_Friday_Load.TextSize = 14.000
+Funky_Friday_Load.TextWrapped = true
+Funky_Friday_Load.MouseButton1Down:connect(function()
+Funky_Friday.Visible = true
+Prison_Life.Visible = false
+Flag_Wars.Visible = false
+Arsenal.Visible = false
+Fall_Of_Hell.Visible = false
+end)
+
+
+Flag_Wars_Load.Name = "Flag_Wars_Load"
+Flag_Wars_Load.Parent = DEAD_HUB
+Flag_Wars_Load.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Flag_Wars_Load.Position = UDim2.new(0.226415098, 0, 0.134210527, 0)
+Flag_Wars_Load.Size = UDim2.new(0, 59, 0, 12)
+Flag_Wars_Load.Font = Enum.Font.SourceSans
+Flag_Wars_Load.Text = "Flag Wars"
+Flag_Wars_Load.TextColor3 = Color3.fromRGB(0, 0, 0)
+Flag_Wars_Load.TextScaled = true
+Flag_Wars_Load.TextSize = 14.000
+Flag_Wars_Load.TextWrapped = true
+Flag_Wars_Load.MouseButton1Down:connect(function()
+	Funky_Friday.Visible = false
+	Prison_Life.Visible = false
+	Flag_Wars.Visible = true
+	Arsenal.Visible = false
+	Fall_Of_Hell.Visible = false
+end)
+
+Fall_Of_Hell_Load.Name = "Fall_Of_Hell_Load"
+Fall_Of_Hell_Load.Parent = DEAD_HUB
+Fall_Of_Hell_Load.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Fall_Of_Hell_Load.Position = UDim2.new(0.420485198, 0, 0.134210527, 0)
+Fall_Of_Hell_Load.Size = UDim2.new(0, 59, 0, 12)
+Fall_Of_Hell_Load.Font = Enum.Font.SourceSans
+Fall_Of_Hell_Load.Text = "Fall Of Hell"
+Fall_Of_Hell_Load.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fall_Of_Hell_Load.TextScaled = true
+Fall_Of_Hell_Load.TextSize = 14.000
+Fall_Of_Hell_Load.TextWrapped = true
+Fall_Of_Hell_Load.MouseButton1Down:connect(function()
+	Funky_Friday.Visible = false
+	Prison_Life.Visible = false
+	Flag_Wars.Visible = false
+	Arsenal.Visible = false
+	Fall_Of_Hell.Visible = true
+end)
+
+Arsenal_Load.Name = "Arsenal_Load"
+Arsenal_Load.Parent = DEAD_HUB
+Arsenal_Load.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Arsenal_Load.Position = UDim2.new(0.603773654, 0, 0.134210527, 0)
+Arsenal_Load.Size = UDim2.new(0, 59, 0, 12)
+Arsenal_Load.Font = Enum.Font.SourceSans
+Arsenal_Load.Text = "Arsenal"
+Arsenal_Load.TextColor3 = Color3.fromRGB(0, 0, 0)
+Arsenal_Load.TextScaled = true
+Arsenal_Load.TextSize = 14.000
+Arsenal_Load.TextWrapped = true
+Arsenal_Load.MouseButton1Down:connect(function()
+	Funky_Friday.Visible = false
+	Prison_Life.Visible = false
+	Flag_Wars.Visible = false
+	Arsenal.Visible = true
+	Fall_Of_Hell.Visible = false
+end)
+
+Prison_Life_Load.Name = "Prison_Life_Load"
+Prison_Life_Load.Parent = DEAD_HUB
+Prison_Life_Load.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Prison_Life_Load.Position = UDim2.new(0.797843754, 0, 0.136842102, 0)
+Prison_Life_Load.Size = UDim2.new(0, 59, 0, 11)
+Prison_Life_Load.Font = Enum.Font.SourceSans
+Prison_Life_Load.Text = "Prison Life"
+Prison_Life_Load.TextColor3 = Color3.fromRGB(0, 0, 0)
+Prison_Life_Load.TextScaled = true
+Prison_Life_Load.TextSize = 14.000
+Prison_Life_Load.TextWrapped = true
+Prison_Life_Load.MouseButton1Down:connect(function()
+	Funky_Friday.Visible = false
+	Prison_Life.Visible = true
+	Flag_Wars.Visible = false
+	Arsenal.Visible = false
+	Fall_Of_Hell.Visible = false
+end)
+
+Close_Button.Name = "Close_Button"
+Close_Button.Parent = DEAD_HUB
+Close_Button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Close_Button.BorderColor3 = Color3.fromRGB(255, 44, 255)
+Close_Button.BorderSizePixel = 5
+Close_Button.Position = UDim2.new(0.857142866, 0, 0, 0)
+Close_Button.Size = UDim2.new(0, 53, 0, 25)
+Close_Button.Font = Enum.Font.SourceSans
+Close_Button.Text = "X"
+Close_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close_Button.TextScaled = true
+Close_Button.TextSize = 14.000
+Close_Button.TextWrapped = true
+Close_Button.MouseButton1Down:connect(function()
+	DEAD_HUB.Visible = false
+	Open_Dead_Hub.Visible = true
+end)
+
+Open_Dead_Hub.Name = "Open_Dead_Hub"
+Open_Dead_Hub.Parent = ScreenGui
+Open_Dead_Hub.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Open_Dead_Hub.BorderColor3 = Color3.fromRGB(255, 16, 255)
+Open_Dead_Hub.BorderSizePixel = 5
+Open_Dead_Hub.Position = UDim2.new(-0.0054794522, 0, 0.604417682, 0)
+Open_Dead_Hub.Size = UDim2.new(0, 106, 0, 29)
+Open_Dead_Hub.Visible = false
+Open_Dead_Hub.Font = Enum.Font.SourceSans
+Open_Dead_Hub.Text = "Open"
+Open_Dead_Hub.TextColor3 = Color3.fromRGB(255, 255, 255)
+Open_Dead_Hub.TextScaled = true
+Open_Dead_Hub.TextSize = 14.000
+Open_Dead_Hub.TextWrapped = true
+Open_Dead_Hub.MouseButton1Down:connect(function()
+	DEAD_HUB.Visible = true
+	Open_Dead_Hub.Visible = false
+end)
